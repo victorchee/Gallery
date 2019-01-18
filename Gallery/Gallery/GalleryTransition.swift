@@ -8,7 +8,11 @@
 
 import UIKit
 
-class GalleryTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class GalleryTransition: NSObject {
+    var isDismissal = false
+}
+
+extension GalleryTransition: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.25
     }

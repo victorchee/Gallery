@@ -9,6 +9,8 @@
 import UIKit
 
 class GalleryViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
+    var images: [UIImage?]!
     var selectedIndex = 0
     
     override func awakeFromNib() {
@@ -21,6 +23,18 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let width = UIScreen.main.bounds.width
+        
+        for image in images {
+            let imageView = Bundle.main.loadNibNamed("GalleryImageView", owner: nil, options: nil)?.first as! GalleryImageView
+            let index = images.index(of: image)!
+            imageView.frame = CGRect(x: width * CGFloat(index), y: 0, width: width, height: scrollView.frame.height)
+            imageView.imageView.image = image
+            scrollView.addSubview(imageView)
+        }
+        
+        scrollView.contentSize = CGSize(width: width * CGFloat(images.count), height: UIScreen.main.bounds.height)
+        scrollView.contentOffset = CGPoint(x: width * CGFloat(selectedIndex), y: 0)
     }
     
 
@@ -34,4 +48,10 @@ class GalleryViewController: UIViewController {
     }
     */
 
+}
+
+extension GalleryViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        selectedIndex = Int(floor(scrollView.contentOffset.x / scrollView.frame.width))
+    }
 }
