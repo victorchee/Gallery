@@ -18,6 +18,13 @@ extension GalleryTransition: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let container = transitionContext.containerView
+        guard let toViewController = transitionContext.viewController(forKey: .to) else { return }
         
+        if !isDismissal {
+            container.addSubview(toViewController.view)
+            
+            
+        }
     }
 }

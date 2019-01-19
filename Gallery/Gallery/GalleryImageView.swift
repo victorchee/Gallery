@@ -22,9 +22,12 @@ class GalleryImageView: UIView {
         scrollView.maximumZoomScale = 2.5
         scrollView.isMultipleTouchEnabled = true
         scrollView.scrollsToTop = false
+//        scrollView.contentSize = UIScreen.main.bounds.size
+//        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         scrollView.delaysContentTouches = false
         scrollView.canCancelContentTouches = false
         scrollView.alwaysBounceVertical = true
+//        scrollView.contentInsetAdjustmentBehavior = .never
         
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(singleTapped(_:)))
         addGestureRecognizer(singleTap)
@@ -54,6 +57,7 @@ class GalleryImageView: UIView {
     
     private func updateContentSize() {
         scrollView.zoomScale = scrollView.minimumZoomScale
+        
         guard let imageSize = imageView.image?.size else { return }
         let screenSize = UIScreen.main.bounds.size
         let height = screenSize.width * imageSize.height / imageSize.width
@@ -107,7 +111,7 @@ extension GalleryImageView: UIScrollViewDelegate {
         if offsetY < 0 && panTouchesCount == 1 && velocity.y < 0 && abs(velocity.y) > abs(velocity.x) {
             // Dismiss
         } else {
-            changeSize(offsetY: offsetY)
+            changeSize(offsetY: 0)
             
             let offsetX = scrollView.frame.width > scrollView.contentSize.width ? (scrollView.frame.width - scrollView.contentSize.width) * 0.5 : 0
             let offsetY = scrollView.frame.height > scrollView.contentSize.height ? (scrollView.frame.height - scrollView.contentSize.height) * 0.5 : 0

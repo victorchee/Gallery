@@ -17,6 +17,7 @@
 		1F6F051721F177A9001A3EF2 /* GalleryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F051621F177A9001A3EF2 /* GalleryImageView.swift */; };
 		1F6F051921F177C4001A3EF2 /* GalleryImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6F051821F177C4001A3EF2 /* GalleryImageView.xib */; };
 		1F6F051B21F178CE001A3EF2 /* GalleryTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F051A21F178CE001A3EF2 /* GalleryTransition.swift */; };
+		1F6F051D21F1BC78001A3EF2 /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F051C21F1BC78001A3EF2 /* GalleryImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1F6F051621F177A9001A3EF2 /* GalleryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageView.swift; sourceTree = "<group>"; };
 		1F6F051821F177C4001A3EF2 /* GalleryImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryImageView.xib; sourceTree = "<group>"; };
 		1F6F051A21F178CE001A3EF2 /* GalleryTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTransition.swift; sourceTree = "<group>"; };
+		1F6F051C21F1BC78001A3EF2 /* GalleryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				1F6F051421F171E1001A3EF2 /* GalleryViewController.swift */,
 				1F6F051621F177A9001A3EF2 /* GalleryImageView.swift */,
 				1F6F051821F177C4001A3EF2 /* GalleryImageView.xib */,
+				1F6F051C21F1BC78001A3EF2 /* GalleryImage.swift */,
 				1F6F051A21F178CE001A3EF2 /* GalleryTransition.swift */,
 				1F6F050221F16E65001A3EF2 /* Main.storyboard */,
 				1F6F050521F16E67001A3EF2 /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				1F6F051521F171E1001A3EF2 /* GalleryViewController.swift in Sources */,
 				1F6F04FF21F16E65001A3EF2 /* AppDelegate.swift in Sources */,
 				1F6F051321F16F3E001A3EF2 /* CollectionViewCell.swift in Sources */,
+				1F6F051D21F1BC78001A3EF2 /* GalleryImage.swift in Sources */,
 				1F6F051721F177A9001A3EF2 /* GalleryImageView.swift in Sources */,
 				1F6F051B21F178CE001A3EF2 /* GalleryTransition.swift in Sources */,
 			);
@@ -303,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2TUBSY8A;
 				INFOPLIST_FILE = Gallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2TUBSY8A;
 				INFOPLIST_FILE = Gallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

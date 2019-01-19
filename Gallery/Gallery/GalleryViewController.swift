@@ -23,18 +23,18 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let width = UIScreen.main.bounds.width
+        let screenSize = UIScreen.main.bounds.size
         
         for image in images {
             let imageView = Bundle.main.loadNibNamed("GalleryImageView", owner: nil, options: nil)?.first as! GalleryImageView
             let index = images.index(of: image)!
-            imageView.frame = CGRect(x: width * CGFloat(index), y: 0, width: width, height: scrollView.frame.height)
+            imageView.frame = CGRect(x: screenSize.width * CGFloat(index), y: 0, width: screenSize.width, height: screenSize.height)
             imageView.imageView.image = image
             scrollView.addSubview(imageView)
         }
         
-        scrollView.contentSize = CGSize(width: width * CGFloat(images.count), height: UIScreen.main.bounds.height)
-        scrollView.contentOffset = CGPoint(x: width * CGFloat(selectedIndex), y: 0)
+        scrollView.contentSize = CGSize(width: screenSize.width * CGFloat(images.count), height: screenSize.height)
+        scrollView.contentOffset = CGPoint(x: screenSize.width * CGFloat(selectedIndex), y: 0)
     }
     
 
