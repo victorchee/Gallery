@@ -3,7 +3,7 @@
 //  Gallery
 //
 //  Created by Migu on 2019/1/18.
-//  Copyright © 2019 VIctorChee. All rights reserved.
+//  Copyright © 2019 VictorChee. All rights reserved.
 //
 
 import UIKit
